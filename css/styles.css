@@ -29,13 +29,14 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 main {
     padding: 20px;
     text-align: center;
 }
+
 h1 {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -47,27 +48,93 @@ h1 {
 
 p {
     padding-bottom: 20px;
+    font-size: 1.25em;
+}
+
+.journal-entry {
+    padding-bottom: 0;
+}
+
+.trip-heading{
+    padding-bottom: 20px;
+}
+
+.travel-heading {
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 /* Button styling */
-.entry-button {
-    display: inline-block;
-    background-color: #805c35;; 
+.entry-button,
+.view-entries-button, 
+.navigation-button,
+.submit-button {
+    background-color: #805c35; 
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: none;
+    font-family: 'IMFellDWPica-Regular', serif;
 }
 
-.entry-button:hover {
+.entry-button:hover,
+.view-entries-button:hover, 
+.navigation-button:hover,
+.submit-button:hover {
     background-color: #4b724e;
+    font-family: 'IMFellDWPica-Regular', serif;
+}
+
+/* Custom input field styling */
+input[type="text"],
+input[type="date"],
+textarea {
+    border: none;
+    background-color: #f5f5f4; 
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px; 
+}
+
+.input-group label {
+    display: block; 
+}
+
+.input-group textarea {
+    width: 500px; 
+}
+
+.cities-visited,
+.experience {
+    padding-bottom: 20px;
+}
+
+.navigation-buttons {
+    text-align: center; 
+    margin-top: 400px; 
+}
+
+.navigation-button {
+    display: inline-block; 
+    margin: 10px; 
 }
 
 /* Footer styling */
 footer {
     color: #333; 
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-align: center;
+    font-size: 0.7em;
+    margin-top: 40px; 
+}
+
+.copyright-text {
+    margin-top: 35px;
 }
