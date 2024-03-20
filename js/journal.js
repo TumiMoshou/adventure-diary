@@ -1,38 +1,30 @@
-// JavaScript code for journal.js
+// Function to handle saving entry
+function saveEntry() {
+    // Retrieve input data
+    const country = document.getElementById('country').value;
+    const arrivalDate = document.getElementById('arrival-date').value;
+    const departureDate = document.getElementById('departure-date').value;
+    const citiesVisited = document.getElementById('cities-visited').value;
+    const experience = document.getElementById('experience').value;
 
-document.addEventListener('DOMContentLoaded', function () {
-    const uploadedPhoto = document.getElementById('uploaded-photo');
-    const photoUploadInput = document.getElementById('photo-upload');
-    const removePhotoButton = document.getElementById('remove-photo-button');
+    // Construct entry object
+    const entry = {
+        country: country,
+        arrivalDate: arrivalDate,
+        departureDate: departureDate,
+        citiesVisited: citiesVisited,
+        experience: experience
+    };
 
-    // Function to handle file upload and display photo preview
-    function handleFileSelect(event) {
-        const file = event.target.files[0]; // Get the first selected file
+    // Retrieve existing entries or initialize as empty array
+    let entries = JSON.parse(localStorage.getItem('entries')) || [];
 
-        // Check if the file is an image
-        if (file && file.type.startsWith('image/')) {
-            const reader = new FileReader();
+    // Add new entry to array
+    entries.push(entry);
 
-            reader.onload = function (e) {
-                uploadedPhoto.src = e.target.result;
-                removePhotoButton.style.display = 'inline-block'; // Show remove photo button
-            };
+    // Store updated entries back to local storage
+    localStorage.setItem('entries', JSON.stringify(entries));
+}
 
-            reader.readAsDataURL(file);
-        }
-    }
-
-    // Function to remove uploaded photo
-    function removePhoto() {
-        uploadedPhoto.src = ''; // Clear the src attribute
-        removePhotoButton.style.display = 'none'; // Hide remove photo button
-        photoUploadInput.value = ''; // Clear the file input
-    }
-
-    // Add event listeners
-    photoUploadInput.addEventListener('change', handleFileSelect);
-    removePhotoButton.addEventListener('click', removePhoto);
-    
-    // Hide the remove photo button initially
-    removePhotoButton.style.display = 'none';
-});
+// Add event listener to save button
+document.getElementById('save-entry-button').addEventListener('click', saveEntry);
