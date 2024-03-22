@@ -1,5 +1,5 @@
-// Function to handle saving entry
 function saveEntry() {
+
     // Retrieve input data
     const country = document.getElementById('country').value;
     const arrivalDate = document.getElementById('arrival-date').value;
@@ -24,7 +24,12 @@ function saveEntry() {
 
     // Store updated entries back to local storage
     localStorage.setItem('entries', JSON.stringify(entries));
+
+    // Display alert
+    alert('Your entry has been saved!');
 }
 
 // Add event listener to save button
 document.getElementById('save-entry-button').addEventListener('click', saveEntry);
+
+

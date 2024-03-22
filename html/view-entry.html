@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>View Entry</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+    </head>
+    <body>
+        <div class="container"> <!-- Add container div -->
+            <header>
+                <h1>View Entry</h1>
+            </header>
+    
+            <!-- Entry Content -->
+            <div id="entry-content">
+                <!-- Entry details will be dynamically added here -->
+            </div>
+    
+            <!-- Buttons for editing and deleting entry -->
+            <div class="action-buttons">
+                <a href="edit-entry.html?index=${index}" class="navigation-button" id="edit-entry-link">Edit Entry</a>
+            </div>
+    
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="index.html" class="navigation-button">Back to Homepage</a>
+                <a href="previous-entries.html" class="navigation-button">View Previous Entries</a>
+            </div>
+    
+            <footer>
+                <p>&copy; 2024 Adventure Diary. All rights reserved.</p>
+            </footer>
+        </div> <!-- Close container div -->
+    
+        <!-- JavaScript file -->
+        <script src="/js/view-entry.js" defer></script>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const index = params.get('index');
+            const editEntryLink = document.getElementById('edit-entry-link');
+            editEntryLink.href = `edit-entry.html?index=${index}`;
+        </script>
+    </body>
+</html>

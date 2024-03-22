@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal Entry</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-</head>
-<body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Journal Entry</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+    </head>
+    <body>
     <header>
-        <h1>Journal Entry</h1>
+        <h1 class="journal-entry">Journal Entry</h1>
     </header>
-
+    
     <main>
         <!-- Trip Details Section -->
         <section id="trip-details">
-            <h2>Trip Details</h2>
-
+            <h2 class="trip-heading">Trip Details</h2>
             <!-- Country Input -->
             <label for="country">Country:</label>
             <input type="text" id="country" name="country">
-            
             <!-- Dates Input -->
             <div>
                 <label for="arrival-date">Arrival Date:</label>
-                <input type="date" id="arrival-date" name="arrival-date">
+                <input type="text" id="arrival-date" name="arrival-date" pattern="\d{1,2}/\d{1,2}/\d{4}">
             </div>
             <div>
                 <label for="departure-date">Departure Date:</label>
-                <input type="date" id="departure-date" name="departure-date">
-            </div>
-            
-            <!-- Photo Upload -->
-            <div>
-                <label for="photo-upload">Upload Photos (up to 20):</label>
-                <input type="file" id="photo-upload" name="photo-upload" multiple accept="image/*">
+                <input type="text" id="departure-date" name="departure-date" pattern="\d{1,2}/\d{1,2}/\d{4}">
             </div>
         </section>
-
+    
         <!-- Travel Experience Section -->
         <section id="travel-experience">
-            <h2>Travel Experience</h2>
-            
+            <h2 class="travel-heading">Travel Experience</h2>
             <!-- Cities Visited Input -->
-            <label for="cities-visited">Cities Visited:</label>
-            <textarea id="cities-visited" name="cities-visited" rows="4"></textarea>
-            
+            <div class="input-group">
+                <label for="cities-visited" class="cities-visited">Cities Visited:</label>
+                <textarea id="cities-visited" name="cities-visited" rows="4"></textarea>
+            </div>
             <!-- Experience Input -->
-            <label for="experience">Experience:</label>
-            <textarea id="experience" name="experience" rows="8"></textarea>
+            <div class="input-group">
+                <label for="experience" class="experience">Experience:</label>
+                <textarea id="experience" name="experience" rows="8"></textarea>
+            </div>
         </section>
-        
+    
         <!-- Submit Button -->
-        <button type="submit">Save Entry</button>
+        <button type="button" id="save-entry-button" class="submit-button">Save Entry</button>
     </main>
-
+    
     <footer>
         <!-- Navigation Buttons -->
         <a href="index.html" class="navigation-button">Back to Homepage</a>
-        <a href="previous-entries.html" class="view-entries-button">View Previous Entries</a>
-        <p>&copy; 2024 Adventure Diary. All rights reserved.</p>
+        <a href="previous-entries.html" class="navigation-button">View Previous Entries</a>
+        <p class="copyright-text">&copy; 2024 Adventure Diary. All rights reserved.</p>
     </footer>
+    <script src="/js/journal.js"></script>
+    </body>
 
-</body>
 </html>

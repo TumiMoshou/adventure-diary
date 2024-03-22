@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Entry</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+    </head>
+    <body>
+    
+    <header>
+        <h1>Edit Entry</h1>
+    </header>
+    
+    <!-- Edit Entry Form -->
+    <form id="edit-entry-form" class="edit-entry-form-container">
+        <!-- Entry Details Inputs -->
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+        <label for="arrival-date">Arrival Date:</label>
+        <input type="text" id="arrival-date" name="arrival-date" required>
+        <label for="departure-date">Departure Date:</label>
+        <input type="text" id="departure-date" name="departure-date" required>
+        <label for="cities-visited">Cities Visited:</label>
+        <textarea id="cities-visited" name="cities-visited" rows="4" required></textarea>
+        <label for="experience">Experience:</label>
+        <textarea id="experience" name="experience" rows="8" required></textarea>
+    
+         <!-- Save Changes and Delete Entry Buttons -->
+        <div class="button-container">
+            <button type="submit" id="save-changes-button">Save Changes</button>
+            <button type="button" id="delete-entry-button">Delete Entry</button>
+        </div>
+    </form>
+    
+    <footer>
+        <div class="navigation-buttons">
+            <a href="index.html" class="navigation-button">Back to Homepage</a>
+            <a href="previous-entries.html" class="navigation-button">View Previous Entries</a>
+        </div>
+        <p>&copy; 2024 Adventure Diary. All rights reserved.</p>
+    </footer>
+    
+    <!-- JavaScript file -->
+    <script src="/js/edit-entry.js" defer></script>
+    </body>
+
+</html>

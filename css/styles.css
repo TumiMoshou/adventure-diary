@@ -13,10 +13,9 @@
     font-style: italic;
 }
 
-/* Main page styling */
+/* General Styling */
 body {
     background-color: #e0d6b7; 
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     font-family: 'IMFellDWPica-Regular', serif;
@@ -31,6 +30,8 @@ header h1 {
     margin: 0;
     font-size: 3em;
 }
+
+/* Main Content */
 
 main {
     padding: 20px;
@@ -51,6 +52,8 @@ p {
     font-size: 1.25em;
 }
 
+/* Journal Entry */
+
 .journal-entry {
     padding-bottom: 0;
 }
@@ -64,7 +67,7 @@ p {
     padding-bottom: 20px;
 }
 
-/* Button styling */
+/* Buttons */
 .entry-button,
 .view-entries-button, 
 .navigation-button,
@@ -88,7 +91,7 @@ p {
     font-family: 'IMFellDWPica-Regular', serif;
 }
 
-/* Custom input field styling */
+/* Forms */
 input[type="text"],
 input[type="date"],
 textarea {
@@ -97,6 +100,8 @@ textarea {
     padding: 5px 10px;
     border-radius: 3px;
     margin-bottom: 10px;
+    font-family: serif;
+    font-size: 18px;
 }
 
 .input-group {
@@ -116,6 +121,8 @@ textarea {
     padding-bottom: 20px;
 }
 
+/* Navigation Buttons */
+
 .navigation-buttons {
     text-align: center; 
     margin-top: 400px; 
@@ -126,7 +133,7 @@ textarea {
     margin: 10px; 
 }
 
-/* Footer styling */
+/* Footer */
 footer {
     color: #333; 
     padding: 20px 20px;
@@ -138,3 +145,129 @@ footer {
 .copyright-text {
     margin-top: 35px;
 }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto; 
+    padding-left: 20px; 
+    padding-right: 20px;
+    text-align: center; 
+}
+
+/* Centering the edit entry page content */
+.edit-entry-form-container {
+    width: 80%; 
+    max-width: 600px; 
+    margin: auto; 
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-bottom: -250px;
+}
+
+/* Edit Entry Form */
+
+#edit-entry-form input,
+#edit-entry-form textarea {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#edit-entry-form button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px 20px;;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#edit-entry-form button:hover {
+    background-color: #45a049;
+}
+
+#edit-entry-form #delete-entry-button {
+    background-color: #e53935; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#edit-entry-form #delete-entry-button:hover {
+    background-color: #c62828; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.button-container #save-changes-button {
+    width: calc(50% - 150px); 
+}
+
+.button-container #delete-entry-button {
+    width: calc(50% - 150px); 
+    margin-left: 20px;
+}
+
+/* Styling for the entry container */
+.entry {
+    padding-bottom: 20px; 
+    margin-bottom: 20px; 
+}
+
+.entry {
+    border-bottom: 1px solid darkgray;
+}
+
+.entry:last-child {
+    border-bottom: none; 
+    margin-bottom: 0; 
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 600px (smartphones) */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 2em; 
+    }
+    
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Adjust input and textarea sizes for better usability on small screens */
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        width: calc(100% - 20px); 
+        max-width: 100%; 
+        margin: 5px 0;
+    }
+
+    /* Adjust button sizes for better usability on small screens */
+    .entry-button,
+    .view-entries-button, 
+    .navigation-button,
+    .submit-button {
+        padding: 8px 16px; 
+        font-size: 0.9em; 
+    }
+}
+
