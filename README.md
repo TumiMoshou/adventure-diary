@@ -12,12 +12,6 @@ Adventure Diary is a web application that allows users to keep track of their tr
 - **Delete Entries**: Users can delete unwanted journal entries.
 - **Responsive Design**: The application is responsive and works well on various devices, including smartphones, tablets, and desktops.
 
-## Deployment
-
-The project is deployed on Netlify. You can access the live version [here](https://your-netlify-site-url).
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge-id/deploy-status)](https://app.netlify.com/sites/your-netlify-site-url)
-
 ## Installation
 
 To run the project locally, follow these steps:
